@@ -26,7 +26,7 @@ function back() {
   display.innerHTML = display.textContent.slice(0, length - 1);
 }
 function DEL() {
-  ans = display.textContent;
+  ans = +display.textContent;
   display.innerHTML = "";
 }
 function equal() {
@@ -63,5 +63,5 @@ function equal() {
 }
 function getans() {
   if (ans.textContent == "Ans") display.innerHTML = "";
-  else display.innerHTML = ans;
+  else display.innerHTML += ans;
 }
