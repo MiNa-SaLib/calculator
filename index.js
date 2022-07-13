@@ -88,7 +88,8 @@ function inser(m) {
       m.textContent == "6" ||
       m.textContent == "7" ||
       m.textContent == "8" ||
-      m.textContent == "9"
+      m.textContent == "9"||
+       m.textContent == "0"
     ) {
       display.innerHTML = "";
     }
