@@ -66,18 +66,18 @@ function equal() {
   }
 
   beforeval = display.textContent;
-  console.log(beforeval); //
+  // console.log(beforeval); //
 
   display.innerHTML = eval(display.textContent);
   flag = 1;
-  console.log(typeof +display.textContent); //console
+  // console.log(typeof +display.textContent); //console
 
   ans = +display.textContent;
 }
 
 function inser(m) {
-  console.log(flag);
-  console.log(m.textContent);
+  // console.log(flag);
+  // console.log(m.textContent);
   if (flag == 1) {
     if (
       m.textContent == "1" ||
@@ -88,8 +88,9 @@ function inser(m) {
       m.textContent == "6" ||
       m.textContent == "7" ||
       m.textContent == "8" ||
-      m.textContent == "9"||
-       m.textContent == "0"
+      m.textContent == "9" ||
+      m.textContent == "0" ||
+      m.textContent == "."
     ) {
       display.innerHTML = "";
     }
@@ -99,6 +100,24 @@ function inser(m) {
 }
 
 function getans() {
-  if (ans.textContent == "Ans") display.innerHTML = "";
-  else display.innerHTML += ans;
+  let d = display.textContent.toString();
+  console.log(d[d.length - 1]);
+  if (d == "") {
+    display.innerHTML = ans;
+  } else if (
+    d[d.length - 1] == "1" ||
+    d[d.length - 1] == "2" ||
+    d[d.length - 1] == "3" ||
+    d[d.length - 1] == "4" ||
+    d[d.length - 1] == "5" ||
+    d[d.length - 1] == "6" ||
+    d[d.length - 1] == "7" ||
+    d[d.length - 1] == "8" ||
+    d[d.length - 1] == "9" ||
+    d[d.length - 1] == "0"
+  ) {
+    display.innerHTML += "*" + ans;
+  } else {
+    display.innerHTML += ans;
+  }
 }
