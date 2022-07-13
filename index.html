@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Your Calculator</h1>
+    <div class="calculator">
+      <div id="display"></div>
+
+      <div class="row1">
+        <div id="bu7" onclick="inser(b7)">7</div>
+        <div id="bu8" onclick="inser(b8)">8</div>
+        <div id="bu9" onclick="inser(b9)">9</div>
+        <div id="budel" onclick="back()">DEL</div>
+        <div id="buc" onclick="DEL()">AC</div>
+      </div>
+
+      <div class="row2">
+        <div id="bu4" onclick="inser(b4)">4</div>
+        <div id="bu5" onclick="inser(b5)">5</div>
+        <div id="bu6" onclick="inser(b6)">6</div>
+        <div id="bum" onclick="inser(bm )">*</div>
+        <div id="bud" onclick="inser(bd)">/</div>
+      </div>
+
+      <div class="row3">
+        <div id="bu1" onclick="inser(b1)">1</div>
+        <div id="bu2" onclick="inser(b2)">2</div>
+        <div id="bu3" onclick="inser(b3)">3</div>
+        <div id="bus" onclick="inser(bs)">+</div>
+        <div id="bu-" onclick="inser(bmin)">-</div>
+      </div>
+
+      <div class="row4">
+        <div id="bu0" onclick="inser(b0)">0</div>
+        <div id="dote" onclick="inser(dote)">.</div>
+        <div id="mod" onclick="inser(mod)">%</div>
+        <div id="ans" onclick="getans()">Ans</div>
+        <div id="bueq" onclick="equal()">=</div>
+      </div>
+    </div>
+    <div class="name">By : MiNa SaLib<i class="fa-solid fa-heart"></i></div>
+    <script src="index.js"></script>
+  </body>
+</html>

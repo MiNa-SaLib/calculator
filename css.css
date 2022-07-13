@@ -1,0 +1,104 @@
+.calculator {
+  max-width: 90%;
+  background-color: #fbfbfb;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 80px auto 10px;
+  box-shadow: 0px 1px 15px 1px #4d4d4d;
+}
+#display {
+  margin: 0 auto;
+  width: calc((100%) - 30px);
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+.row1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  /* border-top: 1px solid black; */
+  align-items: center;
+}
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  /* border-top: 1px solid black; */
+  align-items: center;
+}
+.row3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  /* border-top: 1px solid black; */
+  align-items: center;
+}
+.row4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* border-top: 1px solid black; */
+  align-items: center;
+}
+.calculator div div {
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid black;
+}
+.name {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 80px;
+}
+/* .calculator div div:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+} */
+#bueq {
+  background-color: #2196f3;
+}
+h1 {
+  margin-top: 40px;
+  text-align: center;
+  color: #2196f3;
+}
+@media (min-width: 768px) {
+  .calculator {
+    max-width: 50%;
+  }
+}
+i {
+  padding: 5px;
+  color: red;
+  animation-duration: 1s;
+  animation-name: big-min;
+  animation-iteration-count: infinite;
+}
+@keyframes big-min {
+  25% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
