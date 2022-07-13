@@ -22,6 +22,9 @@ let ans = document.getElementById("ans");
 let display = document.getElementById("display");
 
 function back() {
+  if (flag == 1) {
+    DEL();
+  }
   display.innerHTML = display.textContent.slice(0, length - 1);
 }
 
