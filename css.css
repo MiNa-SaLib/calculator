@@ -32,7 +32,7 @@ button {
   height: 50px;
   background-color: rgb(255, 255, 255);
   display: flex;
-  align-items: center;
+  align-items: center; 
   padding: 10px 15px;
 }
 .row1 {
