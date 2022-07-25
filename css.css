@@ -1,3 +1,16 @@
+.dark {
+  background-color: black;
+}
+.nameindaek {
+  color: white;
+}
+button {
+  padding: 5px;
+  font-size: 18px;
+  color: #2196f3;
+  background-color: white;
+  border: 1px solid #2196f3;
+}
 .calculator {
   max-width: 90%;
   background-color: #fbfbfb;
