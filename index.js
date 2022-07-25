@@ -20,7 +20,12 @@ let mod = document.getElementById("mod");
 let ans = document.getElementById("ans");
 
 let display = document.getElementById("display");
-
+function dark() {
+  let dark = document.body;
+  dark.classList.toggle("dark");
+  let d = document.getElementById("name");
+  d.classList.toggle("nameindaek");
+}
 function back() {
   if (flag == 1) {
     DEL();
@@ -61,14 +66,20 @@ function equal() {
   if (display.textContent[0] == "." && display.textContent[1] == ".") {
     display.innerHTML = `Erorr`;
   }
+  if (display.textContent[0] == "0") {
+    display.innerHTML = display.textContent.slice(
+      1,
+      display.textContent.length
+    );
+  }
   if (display.textContent[0] == "*" || display.textContent[0] == "/") {
     display.innerHTML = `Erorr`;
   }
 
-  beforeval = display.textContent;
   // console.log(beforeval); //
-
-  display.innerHTML = eval(display.textContent);
+  else {
+    display.innerHTML = eval(display.textContent);
+  }
   flag = 1;
   // console.log(typeof +display.textContent); //console
 
@@ -76,48 +87,52 @@ function equal() {
 }
 
 function inser(m) {
-  // console.log(flag);
-  // console.log(m.textContent);
-  if (flag == 1) {
-    if (
-      m.textContent == "1" ||
-      m.textContent == "2" ||
-      m.textContent == "3" ||
-      m.textContent == "4" ||
-      m.textContent == "5" ||
-      m.textContent == "6" ||
-      m.textContent == "7" ||
-      m.textContent == "8" ||
-      m.textContent == "9" ||
-      m.textContent == "0" ||
-      m.textContent == "."
-    ) {
-      display.innerHTML = "";
+  if (display.textContent.length <= 20) {
+    // console.log(flag);
+    // console.log(m.textContent);
+    if (flag == 1) {
+      if (
+        m.textContent == "1" ||
+        m.textContent == "2" ||
+        m.textContent == "3" ||
+        m.textContent == "4" ||
+        m.textContent == "5" ||
+        m.textContent == "6" ||
+        m.textContent == "7" ||
+        m.textContent == "8" ||
+        m.textContent == "9" ||
+        m.textContent == "0" ||
+        m.textContent == "."
+      ) {
+        display.innerHTML = "";
+      }
     }
+    display.innerHTML += m.textContent;
+    flag = 0;
   }
-  display.innerHTML += m.textContent;
-  flag = 0;
 }
 
 function getans() {
-  let d = display.textContent.toString();
-  console.log(d[d.length - 1]);
-  if (d == "") {
-    display.innerHTML = ans;
-  } else if (
-    d[d.length - 1] == "1" ||
-    d[d.length - 1] == "2" ||
-    d[d.length - 1] == "3" ||
-    d[d.length - 1] == "4" ||
-    d[d.length - 1] == "5" ||
-    d[d.length - 1] == "6" ||
-    d[d.length - 1] == "7" ||
-    d[d.length - 1] == "8" ||
-    d[d.length - 1] == "9" ||
-    d[d.length - 1] == "0"
-  ) {
-    display.innerHTML += "*" + ans;
-  } else {
-    display.innerHTML += ans;
+  if (display.textContent.length <= 20) {
+    let d = display.textContent.toString();
+    console.log(d[d.length - 1]);
+    if (d == "") {
+      display.innerHTML = "";
+    } else if (
+      d[d.length - 1] == "1" ||
+      d[d.length - 1] == "2" ||
+      d[d.length - 1] == "3" ||
+      d[d.length - 1] == "4" ||
+      d[d.length - 1] == "5" ||
+      d[d.length - 1] == "6" ||
+      d[d.length - 1] == "7" ||
+      d[d.length - 1] == "8" ||
+      d[d.length - 1] == "9" ||
+      d[d.length - 1] == "0"
+    ) {
+      display.innerHTML += "*" + ans;
+    } else {
+      display.innerHTML += ans;
+    }
   }
 }
